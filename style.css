@@ -104,3 +104,20 @@ label{
     width: 25%;
     background-color: #E71B32; 
 }
+
+.parametro-senha-textos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.media{
+    background-color: #FAF408;
+    width: 50%;
+}
+
+.forte{
+    background-color: #00FF85;
+    width: 100%;
+}
+
+<div class="forca fraca"></div>
