@@ -1,49 +1,28 @@
-<script src="main.js"></script>
 const numeroSenha = document.querySelector('.parametro-senha__texto');
 let tamanhoSenha = 12;
 numeroSenha.textContent = tamanhoSenha;
+
 const botoes = document.querySelectorAll('.parametro-senha__botao');
-console.log(botoes)
+
+// Atribui as funções aos botões (assumindo que o [0] é o de diminuir e o [1] o de aumentar)
 botoes[0].onclick = diminuiTamanho;
-function diminuiTamanho(){
-    tamanhoSenha = tamanhoSenha-1;
-numeroSenha.textContent = tamanhoSenha;
+botoes[1].onclick = aumentaTamanho; 
 
-function aumentaTamanho(){
-    tamanhoSenha = tamanhoSenha+1;
-    numeroSenha.textContent = tamanhoSenha;
-
-    function diminuiTamanho(){
-    if (tamanhoSenha > 1){
-        tamanhoSenha = tamanhoSenha-1;
-    }
-    numeroSenha.textContent = tamanhoSenha;
-
-    function aumentaTamanho(){
-    if (tamanhoSenha < 20){
-       tamanhoSenha = tamanhoSenha+1;
-    }
-    numeroSenha.textContent = tamanhoSenha;
-
-    function diminuiTamanho(){
-    if (tamanhoSenha > 1){
-       // tamanhoSenha = tamanhoSenha-1;
+function diminuiTamanho() {
+    if (tamanhoSenha > 1) {
         tamanhoSenha--;
     }
     numeroSenha.textContent = tamanhoSenha;
+}
 
-    function aumentaTamanho(){
-    if (tamanhoSenha < 20){
-       // tamanhoSenha = tamanhoSenha+1;
-       tamanhoSenha++;
+function aumentaTamanho() {
+    if (tamanhoSenha < 20) {
+        tamanhoSenha++;
     }
     numeroSenha.textContent = tamanhoSenha;
-    const campoSenha = document.querySelector('#campo-senha');
-    const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVXYWZ';
-    campoSenha.value = letrasMaiusculas;
 }
-}
-}
-}
-}
-}
+
+// Configuração do campo de senha
+const campoSenha = document.querySelector('#campo-senha');
+const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'; // Adicionei o Z que faltava na ordem correta
+campoSenha.value = letrasMaiusculas;
